@@ -1,4 +1,4 @@
-# text-adventure
+# text-adventure : A Spring Boot based Text Adventure Toolkit !
 Repository for Spring Boot based Text Adventure Toolkit (Player, Editor)
 
 !!!! Content will be added. This is currently just a initial commit !!!!
@@ -21,7 +21,7 @@ If you are curious, install a mariadb-database, using currently version 10.4 and
     GRANT ALL ON quest_data.* TO 'questuser'@'localhost';
     FLUSH PRIVILEGES;
 
-# END SQL SCRIPT
+# End Infos
 
 Editor will be available at:
 http://localhost:8080/index.xhtml
