@@ -1,0 +1,49 @@
+<ui:composition
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:p="http://primefaces.org/ui"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:H="http://java.sun.com/jsf/html"
+        xmlns:pe="http://primefaces.org/ui/extensions">
+
+    <p:dataTable id="answerTable" var="answer" value="#{questDialogEdit.currentQuest.QAnswers}" editable="true">
+
+        <p:column headerText="No" size="10" >
+            <h:outputText value="#{questDialogEdit.obtainAnswerIndex(answer)}" />
+        </p:column>
+
+        <p:column headerText="Text" size="30" >
+            <p:cellEditor>
+                <f:facet name="output"><h:outputText value="#{answer.answer}" /></f:facet>
+                <f:facet name="input"><p:inputText id="answerInput" value="#{answer.answer}" style="width:100%"/></f:facet>
+            </p:cellEditor>
+        </p:column>
+
+        <p:column headerText="Edit" style="width:32px">
+            <p:rowEditor />
+        </p:column>
+
+        <p:column headerText="Delete" size="30" >
+            <p:commandLink id="deleteLink" update="answerTable" action="#{questDialogEdit.deleteAnswer(answer)}"
+                           style="margin-right:20px;">
+                <p:graphicImage name="woodenui/checkbox_01.png" width="20" height="20"/>
+            </p:commandLink>
+        </p:column>
+
+    </p:dataTable>
+
+    <div class="ui-g">
+        <div class="ui-g-12">
+            <p:commandButton value="Add New Answer" styleClass="ui-priority-primary" process="@this" update="answerTable"
+                             action="#{questDialogEdit.onAddNewAnswer()}" />
+        </div>
+    </div>
+
+
+
+
+
+
+</ui:composition>

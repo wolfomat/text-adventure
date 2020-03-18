@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<h:head>
+    <title>Quest Designer V 0.0.1</title>
+    <h:outputStylesheet name="css/wolfo.css"/>
+</h:head>
+
+<h:body>
+    <h:form id="quest-editor-form">
+
+        <p:growl id="msgs" showDetail="true"/>
+
+        <div class="ui-g">
+            <div class="ui-g-8">
+                <p:panel header="Quest Editor - Version 0.1 -">
+
+                    <div class="ui-g">
+                        <div class="ui-g-3">
+                            <p:commandButton id="submitAddNode" value="Add QuestNode"
+                                             update="questEditPanel games-list" actionListener="#{questChartController.addNode()}"/>
+                        </div>
+                        <div class="ui-g-3">
+                            <p:commandButton id="save" value="Save Quests"
+                                             update="questEditPanel games-list" actionListener="#{questChartController.saveQuest()}"/>
+                        </div>
+                        <div class="ui-g-3">
+                            <p:inputText id="questMainNameInput" value="#{questChartController.questMainName}"/>
+                            <p:watermark for="questMainNameInput" value="Game Name" id="questMainNameInputWm"/>
+                        </div>
+                        <div class="ui-g-3">
+                            <p:commandButton id="submitReset" value="Delete all nodes (dev only-remove me)"
+                                             update="questEditPanel games-list" actionListener="#{questChartController.resetAll()}"/>
+                        </div>
+                    </div>
+                </p:panel>
+            </div>
+
+            <div class="ui-g-4">
+                <p:panel header="List of Games" id="games-list">
+                    <ui:include src="inc-quest-list-table.xhtml"/>
+                </p:panel>
+            </div>
+
+        </div>
+
+        <ui:include src="quest-editor.xhtml"/>
+
+        <ui:include src="inc-quest-edit-dialog.xhtml"/>
+
+    </h:form>
+</h:body>
+</html>

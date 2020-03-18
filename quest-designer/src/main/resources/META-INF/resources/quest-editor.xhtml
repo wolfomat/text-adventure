@@ -1,0 +1,60 @@
+<ui:composition
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:p="http://primefaces.org/ui"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:H="http://java.sun.com/jsf/html"
+        xmlns:pe="http://primefaces.org/ui/extensions"
+>
+
+    <p:panel header="Quest Panel" id="questEditPanel">
+        <p:diagram id="diagram" value="#{questChartController.model}" style="height:1200px" styleClass="ui-widget-content" var="el">
+
+            <f:facet name="element">
+
+                <div onmouseleave="node_onMouseOut(this)">
+
+                    <h:outputText id="questName" value="#{el.questName}" style="display:block; margin-top:1em;"/>
+
+                    <p:commandLink onclick="processEditQuest(this)" >
+                        <p:graphicImage name="woodenui/gear.png" width="20" height="20"/>
+                    </p:commandLink>
+
+                </div>
+
+            </f:facet>
+
+            <p:remoteCommand name="execQuestEdit2" actionListener="#{questChartController.editQuest}" />
+            <p:remoteCommand name="diagram_onNodeMove" actionListener="#{questChartController.onNodeMove}" />
+
+            <p:ajax event="connect" listener="#{questChartController.onConnect}" />
+            <p:ajax event="disconnect" listener="#{questChartController.onDisconnect}" />
+            <p:ajax event="connectionChange" listener="#{questChartController.onConnectionChange}" />
+
+        </p:diagram>
+    </p:panel>
+
+    <script type="text/javascript">
+
+        function processEditQuest(nodeElement) {
+            var parent = nodeElement.parentElement.parentElement;
+
+            execQuestEdit2([
+                {name : 'node_id', value : parent.id},
+            ]);
+
+        }
+
+        function node_onMouseOut(nodeElement) {
+            var parent = nodeElement.parentElement;
+            diagram_onNodeMove([
+                {name : 'node_id', value : parent.id},
+                {name : 'node_x', value : parent.style['left']},
+                {name : 'node_y',value : parent.style['top']}
+            ]);
+        }
+
+    </script>
+
+</ui:composition>

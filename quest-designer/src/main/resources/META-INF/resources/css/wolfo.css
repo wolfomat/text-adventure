@@ -1,0 +1,47 @@
+/*.ui-panel {*/
+/*    margin: 15px;*/
+/*    width: 600px;*/
+/*}*/
+
+
+.ui-diagram-element {
+    border: 0.1em dotted #E5E4E2;
+    background-color: #EFEEEC;
+    width: 10em;
+    height: 4em;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+}
+
+.ui-diagram-element:hover {
+    background-color: #C7C6C4;
+}
+
+.empty-box-5 {
+    width: 0px;
+    height: 0px;
+    margin-bottom: 5px;
+}
+
+.empty-box-25 {
+    width: 0px;
+    height: 0px;
+    margin-bottom: 25px;
+}
+
+body .ui-dialog .ui-dialog-content .ui-datatable table {
+    width: auto;
+}
+
+.ui-icon-pencil {
+    background-image: url(/woodenui/gear.png) !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /*height: 15px;*/
+    /*width: 15px;*/
+}
+
+/*span:hover {*/
+/*    cursor:pointer;*/
+/*}*/

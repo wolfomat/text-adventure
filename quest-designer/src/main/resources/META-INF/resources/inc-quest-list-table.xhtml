@@ -1,0 +1,26 @@
+<ui:composition
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:p="http://primefaces.org/ui"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:H="http://java.sun.com/jsf/html"
+        xmlns:pe="http://primefaces.org/ui/extensions">
+
+    <p:dataTable id="questGamesList" var="quest" value="#{questChartController.allInitQuests}"
+                 editable="false" rowKey="#{quest.id}" selectionMode="single" selection="#{questChartController.selectedQuest}">
+
+        <p:column headerText="Quest Series / Games">
+            <h:outputText value="#{quest.questSeries}"/>
+        </p:column>
+
+        <f:facet name="footer">
+            <p:commandButton id="load" value="Load Quests"
+                             update="quest-editor-form:questEditPanel quest-editor-form:questMainNameInput"
+                             actionListener="#{questChartController.loadQuest()}"/>
+        </f:facet>
+
+    </p:dataTable>
+
+</ui:composition>

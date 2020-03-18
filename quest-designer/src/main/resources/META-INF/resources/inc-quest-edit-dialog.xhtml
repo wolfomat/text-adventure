@@ -1,0 +1,63 @@
+<ui:composition
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:p="http://primefaces.org/ui"
+        xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:H="http://java.sun.com/jsf/html"
+        xmlns:pe="http://primefaces.org/ui/extensions">
+
+    <c:if test="#{questDialogEdit.currentQuest != null}">
+
+        <p:dialog id="editDialog" header="#{questChartController.questNameForEdit}" widgetVar="questEditDialog"
+                  showEffect="clip" hideEffect="clip" modal="true" responsive="true">
+
+            <div class="ui-fluid">
+
+<!--                <p:selectBooleanCheckbox value="#{questDialogEdit.currentQuest.startQuest}" itemLabel="Is Start Quest?">-->
+<!--                    <p:ajax update="questSeriesInput"/>-->
+<!--                </p:selectBooleanCheckbox>-->
+
+<!--                <div class="empty-box-5"></div>-->
+
+<!--                <p:inputText id="questSeriesInput" value="#{questDialogEdit.currentQuest.questSeries}"-->
+<!--                             disabled="#{!questDialogEdit.currentQuest.startQuest}"/>-->
+<!--                <p:watermark for="questSeriesInput" value="Name of the Game" id="questSeriesInputWaterMark" />-->
+
+<!--                <div class="empty-box-5"></div>-->
+
+                <p:inputTextarea id="questTextField" rows="5" cols="30" counter="questTextCounter" maxlength="256"
+                                 counterTemplate="{0} characters remaining." autoResize="false"
+                                 value="#{questDialogEdit.currentQuest.questText.text}"/>
+                <p:watermark for="questTextField" value="Text" id="questTextFieldtWaterMark" />
+
+                <div class="empty-box-5"></div>
+
+                <h:outputText id="questTextCounter"/>
+
+                <div class="empty-box-5"></div>
+
+                <p:inputTextarea id="questQuestionField" rows="5" cols="30" counter="questQuestionCounter" maxlength="256"
+                                 counterTemplate="{0} characters remaining." autoResize="false"
+                                 value="#{questDialogEdit.currentQuest.QQuestion.text}"/>
+                <p:watermark for="questQuestionField" value="Question" id="questQuestionFieldtWaterMark" />
+                <div class="empty-box-5"></div>
+                <h:outputText id="questQuestionCounter"/>
+
+                <div class="empty-box-25"></div>
+
+                <ui:include src="inc-quest-edit-dialog-table.xhtml" />
+
+            </div>
+
+            <!-- for each answer (A1...) show then tooltip on drag element -->
+            <!-- furthmore, create a new rectangle for connection to other quests -->
+
+            <!--        <p:ajax event="close" update="dlgAddress" resetValues="true" />-->
+
+        </p:dialog>
+    </c:if>
+
+
+
+</ui:composition>
