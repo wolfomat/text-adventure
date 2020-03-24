@@ -170,8 +170,8 @@ public class QuestChartController {
 		String success = "saved.";
 
 		try {
-			model.getElements().forEach(this::deleteWrappers);
 			model.getElements().forEach(this::preSaveQuests);
+			model.getElements().forEach(this::deleteWrappers);
 			model.getElements().forEach(this::saveOrUpdate);
 			allInitQuests = databaseUtil.loadAllInitQuests();
 		} catch (Exception e) {
