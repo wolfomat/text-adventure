@@ -1,6 +1,6 @@
 # text-adventure : A Spring Boot based Text Adventure Toolkit #
 
-![ui_shot.png](ui_shot.png)
+![ui_shot.PNG](ui_shot.PNG)
 
 __Welcome!__
  
