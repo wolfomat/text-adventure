@@ -1,4 +1,4 @@
-# text-adventure : A Spring Boot based Text Adventure Toolkit ! #
+# text-adventure : A Spring Boot based Text Adventure Toolkit #
 
 ![ui_shot.png](ui_shot.png)
 
