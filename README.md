@@ -32,7 +32,7 @@ This is a living list. Points may be added and priorities maybe shifted.
 * Development:
     - ##### planned for first build SNAPSHOT Version 1.0.0 #####
     - [ ] provide pre-compiled jar files here in git
-    - [ ] fixing class-1 bugs
+    - [x] fixing class-1 bugs
     - ##### planned for RELEASE Version 1.0.0 #####
     - [ ] fixing class-2 bugs    
     - [ ] re-implement a working quest-player
@@ -53,8 +53,8 @@ This is a living list. Points may be added and priorities maybe shifted.
     - [ ]  Documentation
     
 ## Known Bugs / Issues ##
-- class-1 bugs:
-    - saving sometimes does not work
+~~- class-1 bugs:
+    - saving sometimes does not work~~
 - class 2 bugs:
 - Interface: after adding a quest-box the editing of these dont work.
     - current workaround: simply refresh / reload the  browser-window twice
