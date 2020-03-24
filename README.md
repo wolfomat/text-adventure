@@ -75,11 +75,12 @@ The first idea was a quest-creating toolkit but this idea has been extended to a
 or if required to export the questline into a desired format.
 Simple said: The goal is now to create a simple to use, but yet powerful text-adventure toolkit for the masses :)
     
-# How to run - Instructions #
+## How to run - Instructions ##
 This instruction is intended to give you a simple set of instruction to execute on your local computer. 
 For advanced users - feel free to try it out and give feedback - but please Please take notes of the Know Bugs / Issues.
 
 Requirmentes:
+1) java jdk > 11.03  (never tested jre...) https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
 1) maria db 10.4 https://downloads.mariadb.org/mariadb/10.4.12/
 1) maven > 3.3 https://maven.apache.org/download.cgi
 
