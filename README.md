@@ -31,7 +31,8 @@ This is a living list. Points may be added and priorities maybe shifted.
 
 * Development:
     - ##### planned for first build SNAPSHOT Version 1.0.0 #####
-    - [ ] provide pre-compiled jar files here in git
+    ~~- [ ] provide pre-compiled jar files here in git~~
+    - [x] provide precompiled jar (no time for messing with those github stuff)
     - [x] fixing class-1 bugs
     - ##### planned for RELEASE Version 1.0.0 #####
     - [ ] fixing class-2 bugs    
@@ -91,10 +92,14 @@ The current Version is source code only. In order to test this tool or make this
 1) Get maven > 3.3+ https://maven.apache.org/download.cgi (maven bin)
     1) it is may required to add maven to PATH-variable of your system
 1) Execute following SQL Script : [Script below](#sql-script "goto sql script")
+1) now you have the options:
+    1) build yourself  
+    1) or download at my project-homepage: https://gamesground.net/text-adventure-project/ 
+    Skip the next step (clone the repository) if you download the snapshot on my homepage    
 1) clone the repository then build with maven:
-    1) mvn clean instaall on quest-core
+    1) mvn clean install on quest-core
     1) mvn clean compile package on quest-designer
-1) after build run the jar-file 'quest-designer-1.0.0-SNAPSHOT.jar' with java -jar
+1) after build or download run the jar-file 'quest-designer-1.0.0-SNAPSHOT.jar' with java -jar
 1) or use your prefered IDE to build all of them
 1) hibernate will create the required database tables
 1) editor will be located at: http://localhost:8080/index.xhtml (unless you change the port in application.properties)
