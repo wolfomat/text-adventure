@@ -47,6 +47,7 @@ This is a living list. Points may be added and priorities maybe shifted.
     - [ ] export-interface for quest-line
     - [ ] extend the Quest-Datastructure for assigning NPCs
     - [ ] export as runnable file (exe/linux executable rather than a jar)    
+    - [ ] simple savestates for quest-interpreters / "players"
     - ##### general tasks without version-bounds: #####
     - [ ] use github bug-tracking / task-system
     - [ ] architecture overview / source documentation
