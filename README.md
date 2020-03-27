@@ -37,9 +37,9 @@ This is a living list. Points may be added and priorities maybe shifted.
     - ##### planned for RELEASE Version 1.0.0 #####
     - [ ] fixing class-2 bugs    
     - [ ] re-implement a working quest-player
-        - [ ] command Line version
-        - [ ] browser embedded version
-    - [ ] colors for html and command line player       
+        - [ ] command Line version -> github issue #3
+        - [ ] browser embedded version -> github issue #4
+    - [ ] colors for html and command line player -> github issue #5       
     - [ ] initializing the application (first run)
     - [ ] embedded database  
     - ##### planned for RELEASE Version 1.1.0 #####    
