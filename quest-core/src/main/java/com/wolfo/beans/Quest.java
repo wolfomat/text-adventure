@@ -1,5 +1,6 @@
 package com.wolfo.beans;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -19,7 +20,7 @@ import lombok.Setter;
 
 @Entity
 @NoArgsConstructor
-public class Quest {
+public class Quest implements Serializable {
 
 	@Id
 	@Column(name = "id", unique = true)

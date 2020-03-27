@@ -1,5 +1,7 @@
 package com.wolfo.beans;
 
+import java.io.Serializable;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,7 +19,7 @@ import lombok.Setter;
 
 @Entity
 @NoArgsConstructor
-public class QAnswer {
+public class QAnswer implements Serializable {
 
 	@Id
 	@Column(name = "id", unique = true)

@@ -1,5 +1,6 @@
 package com.wolfo.beans;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +20,7 @@ import lombok.Setter;
 
 @Entity
 @NoArgsConstructor
-public class PfElementWrapper {
+public class PfElementWrapper implements Serializable {
 
 	@Id
 	@Column(name = "id", unique = true)

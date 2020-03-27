@@ -9,6 +9,8 @@ import com.wolfo.beans.Quest;
 
 public class QuestUtils {
 
+	private QuestUtils() { }
+
 	public static Quest createEmptyQuest() {
 		Quest quest = new Quest();
 		quest.setQuestText(new QText());

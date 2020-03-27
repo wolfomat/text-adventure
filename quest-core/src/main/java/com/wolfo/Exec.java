@@ -1,5 +1,6 @@
 package com.wolfo;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -13,16 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 public class Exec {
 
 	public static void main(String[] args) {
-
-		ApplicationContext context
-				= new AnnotationConfigApplicationContext(Exec.class);
-		Exec p = context.getBean(Exec.class);
-		p.create();
-
-		System.exit(0);
+		SpringApplication.run(Exec.class, args);
 	}
 
-	private  static void create() {
-		log.info("(quest only) Exiting - Database should have been created now.");
-	}
 }

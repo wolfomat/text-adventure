@@ -93,21 +93,14 @@ public class DatabaseUtilImpl implements DatabaseUtil {
 
 	@Override
 	public List<Quest> loadAllInitQuests() {
-		Example<Quest> example = Example.of(createExample(null));
-		return questReposity.findAll(example);
+		final List<Quest> allInitQuest = questReposity.findAllByIsStartQuest(true);
+		return allInitQuest;
 	}
 
 	@Override
 	public Quest loadQuestByName(final String questName) {
-		return questReposity.findByQuestSeries(questName);
+		final Quest quest = questReposity.findByQuestSeriesAndIsStartQuest(questName, true);
+		return quest;
 	}
 
-	private Quest createExample(String name) {
-		final Quest q = new Quest();
-		q.setStartQuest(true);
-		if (StringUtils.isNotEmpty(name)) {
-			q.setQuestSeries(name);
-		}
-		return q;
-	}
 }

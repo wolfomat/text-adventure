@@ -48,6 +48,7 @@ This is a living list. Points may be added and priorities maybe shifted.
     - [ ] extend the Quest-Datastructure for assigning NPCs
     - [ ] export as runnable file (exe/linux executable rather than a jar)    
     - [ ] simple savestates for quest-interpreters / "players"
+    - [ ] unit tests
     - ##### general tasks without version-bounds: #####
     - [ ] use github bug-tracking / task-system
     - [ ] architecture overview / source documentation

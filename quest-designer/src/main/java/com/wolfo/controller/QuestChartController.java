@@ -8,7 +8,6 @@ import java.util.stream.Collectors;
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
-import javax.faces.event.ActionEvent;
 import javax.inject.Named;
 
 import org.apache.commons.lang3.StringUtils;
@@ -104,7 +103,7 @@ public class QuestChartController {
 		allInitQuests = databaseUtil.loadAllInitQuests();
 	}
 
-	public void onNodeMove(ActionEvent param) {
+	public void onNodeMove() {
 		Map<String, String> params = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
 		String id = params.get("node_id").replace("quest-editor-form:diagram-", "");
 		String x = params.get("node_x");
@@ -253,11 +252,11 @@ public class QuestChartController {
 		}
 	}
 
+	// TODO: move this to a service -> "ElementWrapperService"
 	private void createFromWrapper(PfElementWrapper pfElementWrapper) {
 		final List<PfElementWrapper> toCreate = new ArrayList<>();
 		toCreate.add(pfElementWrapper);
 
-		// TODO: real recovered positions
 		processAnswers(pfElementWrapper.getQuest(), toCreate);
 
 		int num = 1;

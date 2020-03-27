@@ -1,5 +1,7 @@
 package com.wolfo.beans;
 
+import java.io.Serializable;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,7 +20,7 @@ import lombok.Setter;
 
 @Entity
 @NoArgsConstructor
-public class PfEndPointWrapper {
+public class PfEndPointWrapper implements Serializable {
 
 	@Id
 	@Column(name = "id", unique = true)
