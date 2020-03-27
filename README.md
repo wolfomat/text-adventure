@@ -34,14 +34,14 @@ This is a living list. Points may be added and priorities maybe shifted.
     ~~- [ ] provide pre-compiled jar files here in git~~
     - [x] provide precompiled jar (no time for messing with those github stuff)
     - [x] fixing class-1 bugs
-    - ##### planned for RELEASE Version 1.0.0 #####
-    - [ ] fixing class-2 bugs    
+    - ##### planned for RELEASE Version 1.0.0 #####    
     - [ ] re-implement a working quest-player
         - [ ] command Line version -> github issue #3
         - [ ] browser embedded version -> github issue #4
     - [ ] colors for html and command line player -> github issue #5       
     - [ ] initializing the application (first run)
     - [ ] embedded database  
+    - [ ] fixing class-2 bugs -> github issue #1   
     - ##### planned for RELEASE Version 1.1.0 #####    
     - [ ] design the ui for more simple usage
     - [ ] export-interface for quest-line
